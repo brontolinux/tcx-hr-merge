@@ -1,0 +1,22 @@
+# Terraform
+web-service/terraform/.terraform/
+web-service/terraform/.build/
+web-service/terraform/*.tfstate
+web-service/terraform/*.tfstate.*
+web-service/terraform/terraform.tfvars
+web-service/terraform/.terraform.lock.hcl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
