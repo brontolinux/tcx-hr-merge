@@ -4,7 +4,7 @@ This project provides a Python script to merge heart rate (HR) data from one TCX
 
 This script was tested with a TCX file downloaded from Strava, where the activity was uploaded to Strava by a Technogym treadmill and the Technogym Live app, and the HR information from a Garmin Forerunner watch, downloaded from Garmin Connect. I didn't have a chance to test it on any other setting, so YMMV. **Pull requests are gladly welcome**.
 
-A web-based version of this tool is also available in the [web-service](web-service/) directory.
+A web-based version of this tool is also available in the [web-service](web-service/) directory. It can be deployed to AWS S3, or simply opened directly in your browser from a local file (`web-service/frontend/index.html`) - all processing happens client-side, so no server is needed.
 
 ## Motivation
 
