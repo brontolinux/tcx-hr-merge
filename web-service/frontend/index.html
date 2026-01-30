@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCX Heart Rate Merger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏃 TCX Heart Rate Merger</h1>
+            <p class="subtitle">Merge heart rate data from one TCX file into another</p>
+        </header>
+
+        <main>
+            <div class="info-box">
+                <h2>How it works</h2>
+                <p>This tool merges heart rate data from a source TCX file into a target TCX file by matching timestamps. Perfect for when you have:</p>
+                <ul>
+                    <li>A TCX file with correct GPS/distance data but missing heart rate</li>
+                    <li>Another TCX file with heart rate data but incorrect GPS/distance</li>
+                </ul>
+                <p><strong>Privacy:</strong> Your files are processed in memory and are never stored on our servers.</p>
+            </div>
+
+            <form id="merge-form" class="upload-form">
+                <div class="file-input-group">
+                    <label for="hr-file">
+                        <span class="label-icon">❤️</span>
+                        <span class="label-text">Heart Rate Source File</span>
+                        <span class="label-desc">TCX file containing the HR data</span>
+                    </label>
+                    <input type="file" 
+                           id="hr-file" 
+                           name="hr_file" 
+                           accept=".tcx" 
+                           required>
+                    <div class="file-info" id="hr-file-info"></div>
+                </div>
+
+                <div class="file-input-group">
+                    <label for="main-file">
+                        <span class="label-icon">📍</span>
+                        <span class="label-text">Target Activity File</span>
+                        <span class="label-desc">TCX file to merge HR data into (with GPS/distance)</span>
+                    </label>
+                    <input type="file" 
+                           id="main-file" 
+                           name="main_file" 
+                           accept=".tcx" 
+                           required>
+                    <div class="file-info" id="main-file-info"></div>
+                </div>
+
+                <button type="submit" id="submit-btn" class="submit-btn" disabled>
+                    <span class="btn-text">Merge Files</span>
+                    <span class="btn-loading" hidden>
+                        <span class="spinner"></span>
+                        Processing...
+                    </span>
+                </button>
+            </form>
+
+            <div id="result" class="result" hidden>
+                <div class="result-success" id="result-success" hidden>
+                    <h3>✅ Merge Complete!</h3>
+                    <p id="result-message"></p>
+                    <button id="download-btn" class="download-btn">
+                        ⬇️ Download Merged File
+                    </button>
+                </div>
+                <div class="result-error" id="result-error" hidden>
+                    <h3>❌ Error</h3>
+                    <p id="error-message"></p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>
+                <a href="https://github.com/marcomarongiu/tcx-hr-merge" target="_blank">
+                    View on GitHub
+                </a>
+                | Licensed under GPL-3.0
+            </p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

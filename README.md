@@ -4,19 +4,21 @@ This project provides a Python script to merge heart rate (HR) data from one TCX
 
 This script was tested with a TCX file downloaded from Strava, where the activity was uploaded to Strava by a Technogym treadmill and the Technogym Live app, and the HR information from a Garmin Forerunner watch, downloaded from Garmin Connect. I didn't have a chance to test it on any other setting, so YMMV. **Pull requests are gladly welcome**.
 
+A web-based version of this tool is also available in the [web-service](web-service/) directory.
+
 ## Motivation
 
 I did an activity on a Technogym Treadmill, with my Garmin watch sending heart rate data to the Technogym Live app. When the activity was finished and uploaded by Live to Strava, the heart rate information was missing, for some reason (it was still visible on Live, but didn't end up in Technogym and, hence, not in Strava either). I still had the heart rate information in the watch, but with incorrect distance point or lap information.
 
 I asked CoPilot to merge the two TCX files from Strava and Connect, it ended up writing a python script to do the trick. So here it is.
 
-## Features
+## Command Line Usage
+
+### Features
 
 - Merges HR data from a "source" TCX file into a "target" TCX file by matching timestamps.
 - Produces a new TCX file with the merged HR data, preserving the structure and formatting of the target file.
 - Handles large TCX files efficiently.
-
-## Usage
 
 ### Requirements
 
