@@ -8,8 +8,6 @@ A web-based version of the TCX Heart Rate Merger tool. It allows you to:
 
 **Privacy**: All processing happens entirely in your browser - your files never leave your device.
 
-**BUILT WITH CoPilot, YMMV!!!**
-
 ## Architecture
 
 The web service is a static website deployed to AWS S3. All TCX file processing is done client-side in JavaScript, so no server-side computation is needed.
@@ -34,16 +32,7 @@ The web service is a static website deployed to AWS S3. All TCX file processing 
 
 ## Local Usage
 
-Since all processing happens client-side in your browser, you can use the tool without deploying it to AWS. Simply open the `frontend/index.html` file directly in your browser:
-
-```bash
-# From the web-service directory
-xdg-open frontend/index.html   # Linux
-open frontend/index.html       # macOS
-start frontend/index.html      # Windows
-```
-
-Or drag and drop the file into your browser window. The tool will work exactly the same way as the hosted version.
+You don't need to deploy to AWS to use this tool. See [BROWSER.md](../BROWSER.md) for step-by-step instructions on using it directly in your browser.
 
 ## Prerequisites
 
